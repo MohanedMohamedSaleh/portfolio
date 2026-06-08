@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="Logo.png">
 </head>
 <body>
-
+<div id="overlay" onclick="toggleMenu()"></div>
 <!-- Navbar -->
 <nav>
     <h2 class="logo">Mohaned</h2>
@@ -21,19 +21,19 @@
 
     <ul id="navMenu">
 
-        <li class="close-item">
-            <span onclick="toggleMenu()">✕</span>
-        </li>
+       <li class="close-item">
+    <span onclick="closeMenu()">✕</span>
+    </li>
 
         <li><a href="#about" onclick="closeMenu()">About</a></li>
         <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
         <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="setTimeout(closeMenu,300)">Contact</a></li>
-        <li>
-            <a href="MohanedCV.pdf" class="btn-cv" target="_blank">
-                Download CV
-            </a>
-        </li>
+       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    <li class="cv-item">
+    <a href="MohanedCV.pdf" class="btn-cv" target="_blank">
+        Download CV
+    </a>
+</li>
 
     </ul>
 </nav>
@@ -139,11 +139,11 @@
 <script>
 history.scrollRestoration = "manual";
 
-window.onload = function() {
+window.onload = function () {
     window.scrollTo(0, 0);
 };
 
-// Smooth scroll effect
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -154,19 +154,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth',
             block: 'start'
         });
+
+        closeMenu();
     });
 });
 
-// Mobile Menu
+// Open / Close Menu
 function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("active");
+
+    if (document.getElementById("navMenu").classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "";
+    }
 }
 
 // Close Menu
 function closeMenu() {
-    setTimeout(() => {
-        document.getElementById("navMenu").classList.remove("active");
-    }, 200);
+    document.getElementById("navMenu").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+    document.body.style.overflow = "";
 }
 </script>
 
