@@ -4,15 +4,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         const target = document.querySelector(this.getAttribute('href'));
 
-        const targetPosition = target.offsetTop - 70;
-
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 });
-
 // Mobile Menu
 function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("active");
