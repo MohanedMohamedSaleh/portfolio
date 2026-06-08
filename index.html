@@ -137,6 +137,12 @@
 </section>
 
 <script>
+history.scrollRestoration = "manual";
+
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
 // Smooth scroll effect
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
