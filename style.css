@@ -20,6 +20,7 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -522,21 +523,26 @@ html{
         align-items:center;
     }
 
-    #navMenu{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:250px;
-        height:100vh;
-        background:#020617;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        padding-top:80px;
-        gap:25px;
-        transition:.3s;
-        z-index:9999;
-    }
+   #navMenu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:250px;
+    height:100vh;
+    background:#020617;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:80px;
+    gap:25px;
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    z-index:9999;
+}
+
+#navMenu.active{
+    transform:translateX(0);
+}
 
     #navMenu.active{
         right:0;
