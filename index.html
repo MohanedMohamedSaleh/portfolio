@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohaned | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2 class="logo">Mohaned</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="MohanedCV.pdf" class="btn-cv" target="_blank">Download CV</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <h1>Hi, I'm Mohaned</h1>
+            <p>Computer Science Student | AI Enthusiast</p>
+
+            <div class="hero-buttons">
+                <a href="#about" class="btn">View My Details</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="Logo.png" alt="Profile Picture" class="profile-pic">
+        </div>
+
+    </div>
+</section>
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <img src="Mypic.jpg" alt="About Picture" class="about-pic">
+        <p>
+            I'm a passionate Computer Science & Artificial Intelligence student specializing in Decision Support Systems. I have strong experience in programming, advanced data warehousing, and system auditing. I love analyzing complex workflows, implementing smart automations, and building data-driven systems that bridge technical requirements with absolute efficiency and data integrity.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">SQL</div>
+        <div class="card">Problem Solving</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Data Warehousing</div>
+        <div class="card">Jira</div>
+        <div class="card">Monday.com</div>
+        <div class="card">Workflow Automation</div>
+        <div class="card">Advanced Excel</div>
+        <div class="card">Google Sheets</div>
+        <div class="card">Data Integrity</div>
+        <div class="card">Data Scripting</div>
+        <div class="card">Technical Troubleshooting</div>
+        <div class="card">Agile/Scrum</div>
+        
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>Bank Management System</h3>
+            <p>
+                Desktop application developed using Java for managing
+                customer accounts, transactions, and banking operations.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Resort Management System</h3>
+            <p>
+                Comprehensive booking and billing system with food ordering
+                and electronic payment functionalities.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Data Warehouse Project</h3>
+            <p>
+                Designed and implemented a data warehouse solution
+                for analytical reporting and business intelligence.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+        <a href="mailto:mohanedegypt76@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/mohaned-mohamed-90a397259/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/MohanedMohamedSaleh" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+    </div>
+</section>
+
+<script>
+// Smooth scroll effect
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
