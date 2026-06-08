@@ -12,9 +12,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 // Mobile Menu
 function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
+    const menu = document.getElementById("navMenu");
+
+    menu.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "";
+    }
 }
 
 function closeMenu() {
     document.getElementById("navMenu").classList.remove("active");
+    document.body.style.overflow = "";
 }
