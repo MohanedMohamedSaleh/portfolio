@@ -3,148 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohaned | Portfolio</title>
+    <title>Mohaned Mohamed | CS & AI Student — Portfolio</title>
+    <meta name="description" content="Portfolio of Mohaned Mohamed, a Computer Science & Artificial Intelligence student at Cairo University specializing in Decision Support Systems, data systems, and workflow automation.">
+    <meta name="author" content="Mohaned Mohamed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mohaned Mohamed | Portfolio">
+    <meta property="og:description" content="Computer Science & AI student specializing in Decision Support Systems, data systems, and workflow automation.">
+    <meta property="og:image" content="Mypic.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Logo.png">
 </head>
 <body>
-<div id="overlay" onclick="toggleMenu()"></div>
+
+<div id="overlay"></div>
+
 <!-- Navbar -->
 <nav>
-    <h2 class="logo">Mohaned</h2>
+    <a href="#top" class="logo">
+        <img src="Logo.png" alt="" class="logo-mark">
+        <span>Mohaned</span>
+    </a>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
     <ul id="navMenu">
+        <li class="close-item">
+            <button class="close-btn" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </li>
 
-       <li class="close-item">
-    <span onclick="closeMenu()">✕</span>
-    </li>
+        <li><a href="#about" class="nav-link"><i class="fa-regular fa-user"></i><span>About</span></a></li>
+        <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
+        <li><a href="#projects" class="nav-link"><i class="fa-regular fa-folder"></i><span>Projects</span></a></li>
+        <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a></li>
+        <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i><span>Certifications</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fa-regular fa-envelope"></i><span>Contact</span></a></li>
 
-       <li>
-    <a href="#about" onclick="closeMenu()">
-        <i class="fa-regular fa-user"></i>
-        <span>About</span>
-    </a>
-</li>
-
-<li>
-    <a href="#skills" onclick="closeMenu()">
-        <i class="fa-solid fa-code"></i>
-        <span>Skills</span>
-    </a>
-</li>
-
-<li>
-    <a href="#projects" onclick="closeMenu()">
-        <i class="fa-regular fa-folder"></i>
-        <span>Projects</span>
-    </a>
-</li>
-
-<li>
-    <a href="#contact" onclick="closeMenu()">
-        <i class="fa-regular fa-envelope"></i>
-        <span>Contact</span>
-    </a>
-</li>
-    <li class="cv-item">
-   <a href="MohanedCV.pdf" class="btn-cv" target="_blank">
-    <i class="fa-solid fa-download"></i>
-    <span>Download CV</span>
-</a>
-</li>
-
+        <li class="cv-item">
+            <a href="MohanedCV.pdf" class="btn-cv" download>
+                <i class="fa-solid fa-download"></i>
+                <span>Download CV</span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" id="top">
     <div class="hero-content">
 
-        <div class="hero-text">
-            <h1>Hi, I'm Mohaned</h1>
-            <p>Computer Science Student | AI Enthusiast</p>
+        <div class="hero-text reveal">
+            <p class="eyebrow">Computer Science & AI Student</p>
+            <h1>Hi, I'm <span>Mohaned</span></h1>
+            <p class="hero-sub">
+                I build data-driven systems that turn messy workflows into
+                reliable, well-structured software — with a focus on data
+                integrity and smart automation.
+            </p>
 
             <div class="hero-buttons">
-                <a href="#about" class="btn">View My Details</a>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
             </div>
         </div>
 
-        <div class="hero-image">
-            <img src="Logo.png" alt="Profile Picture" class="profile-pic">
+        <div class="hero-image reveal">
+            <img src="Mypic.jpg" alt="Portrait of Mohaned Mohamed" class="profile-pic">
         </div>
 
     </div>
 </section>
+
 <!-- About -->
 <section id="about">
+    <p class="section-eyebrow">Get to know me</p>
     <h2>About Me</h2>
-    <div class="about-container">
-        <img src="Mypic.jpg" alt="About Picture" class="about-pic">
+    <div class="about-container reveal">
+        <i class="fa-solid fa-brain about-icon" aria-hidden="true"></i>
         <p>
-            I'm a passionate Computer Science & Artificial Intelligence student specializing in Decision Support Systems. I have strong experience in programming, advanced data warehousing, and system auditing. I love analyzing complex workflows, implementing smart automations, and building data-driven systems that bridge technical requirements with absolute efficiency and data integrity.
+            I'm a Computer Science & Artificial Intelligence student at Cairo
+            University, specializing in <strong>Decision Support Systems</strong>.
+            I have hands-on experience across programming, data warehousing,
+            and system auditing — with a particular interest in analyzing
+            complex workflows, implementing smart automations, and building
+            data systems that keep technical requirements and data integrity
+            in balance.
         </p>
+
+        <div class="about-highlights">
+            <div class="about-highlight">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Decision Support Systems</span>
+            </div>
+            <div class="about-highlight">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Data Integrity</span>
+            </div>
+            <div class="about-highlight">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Workflow Automation</span>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Skills -->
 <section id="skills">
+    <p class="section-eyebrow">What I work with</p>
     <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="card">Java</div>
-        <div class="card">Python</div>
-        <div class="card">SQL</div>
-        <div class="card">Problem Solving</div>
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">Data Warehousing</div>
-        <div class="card">Jira</div>
-        <div class="card">Monday.com</div>
-        <div class="card">Workflow Automation</div>
-        <div class="card">Advanced Excel</div>
-        <div class="card">Google Sheets</div>
-        <div class="card">Data Integrity</div>
-        <div class="card">Data Scripting</div>
-        <div class="card">Technical Troubleshooting</div>
-        <div class="card">Agile/Scrum</div>
-        
+
+    <div class="skills-group reveal">
+        <h3 class="skills-group-title">Programming & Web</h3>
+        <div class="skills-container">
+            <div class="card"><i class="fa-brands fa-java"></i>Java</div>
+            <div class="card"><i class="fa-brands fa-python"></i>Python</div>
+            <div class="card"><i class="fa-solid fa-database"></i>SQL</div>
+            <div class="card"><i class="fa-brands fa-html5"></i>HTML</div>
+            <div class="card"><i class="fa-brands fa-css3-alt"></i>CSS</div>
+            <div class="card"><i class="fa-brands fa-js"></i>JavaScript</div>
+        </div>
+    </div>
+
+    <div class="skills-group reveal">
+        <h3 class="skills-group-title">Data & Systems</h3>
+        <div class="skills-container">
+            <div class="card"><i class="fa-solid fa-server"></i>Data Warehousing</div>
+            <div class="card"><i class="fa-solid fa-shield-halved"></i>Data Integrity</div>
+            <div class="card"><i class="fa-solid fa-code-compare"></i>Data Scripting</div>
+            <div class="card"><i class="fa-solid fa-diagram-project"></i>Workflow Automation</div>
+            <div class="card"><i class="fa-solid fa-wrench"></i>Technical Troubleshooting</div>
+        </div>
+    </div>
+
+    <div class="skills-group reveal">
+        <h3 class="skills-group-title">Tools & Ways of Working</h3>
+        <div class="skills-container">
+            <div class="card"><i class="fa-brands fa-jira"></i>Jira</div>
+            <div class="card"><i class="fa-regular fa-calendar-check"></i>Monday.com</div>
+            <div class="card"><i class="fa-solid fa-file-excel"></i>Advanced Excel</div>
+            <div class="card"><i class="fa-brands fa-google"></i>Google Sheets</div>
+            <div class="card"><i class="fa-solid fa-arrows-spin"></i>Agile / Scrum</div>
+            <div class="card"><i class="fa-solid fa-puzzle-piece"></i>Problem Solving</div>
+        </div>
     </div>
 </section>
 
 <!-- Projects -->
 <section id="projects">
+    <p class="section-eyebrow">Selected work</p>
     <h2>Projects</h2>
 
     <div class="projects-container">
 
-        <div class="project">
-            <h3>Bank Management System</h3>
+        <article class="project reveal">
+            <div class="project-icon"><i class="fa-solid fa-futbol"></i></div>
+            <h3>Football Players Data & Analytics</h3>
             <p>
-                Desktop application developed using Java for managing
-                customer accounts, transactions, and banking operations.
+                Architected a system for collecting, organizing, and managing
+                large-scale athletic datasets, applying advanced data
+                structures to optimize storage, retrieval, and overall
+                system efficiency while enforcing strict data integrity checks.
             </p>
+            <div class="project-tags">
+                <span>C++</span><span>Java</span><span>Data Structures</span>
+            </div>
+        </article>
+
+        <article class="project reveal">
+            <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>Supermarket Database & Operations System</h3>
+            <p>
+                Built a database-driven framework to streamline product
+                management and operational workflows, with complex SQL
+                queries and schemas handling transaction logs and inventory
+                tracking, and audited data entry for consistency.
+            </p>
+            <div class="project-tags">
+                <span>C#</span><span>SQL</span><span>DBMS</span>
+            </div>
+        </article>
+
+        <article class="project reveal">
+            <div class="project-icon"><i class="fa-solid fa-clapperboard"></i></div>
+            <h3>Movies Information Platform</h3>
+            <p>
+                Developed a responsive web app for browsing and filtering
+                entertainment data, with custom UI components and interactive
+                modules built in JavaScript to make the data easy to explore.
+            </p>
+            <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="projects-more">
+        More projects and code on
+        <a href="https://github.com/MohanedMohamedSaleh" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <p class="section-eyebrow">Background</p>
+    <h2>Education</h2>
+    <div class="education-container reveal">
+        <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+            <h3>Bachelor of Computers and Artificial Intelligence</h3>
+            <p class="education-meta">Cairo University, Egypt · Specialization: Decision Support Systems</p>
+            <p class="education-meta">Expected Graduation: 2027</p>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+    <p class="section-eyebrow">Recognized learning</p>
+    <h2>Certifications</h2>
+
+    <div class="certificates-list">
+
+        <div class="certificate-card reveal">
+            <a href="Certificate_GenAI_CIB.png" target="_blank" rel="noopener" class="certificate-thumb">
+                <img src="Certificate_GenAI_CIB.png" alt="Certificate of Attendance – Generative AI, CIB Summer Internship Program">
+            </a>
+            <div class="certificate-info">
+                <h3>Certificate of Attendance — Generative AI</h3>
+                <p class="certificate-meta">
+                    <i class="fa-solid fa-building-columns"></i>
+                    CIB Egypt · Summer Internship Program
+                </p>
+                <p class="certificate-meta">
+                    <i class="fa-regular fa-calendar"></i>
+                    July 2026
+                </p>
+                <p>
+                    Acknowledges participation, completion, and understanding of the
+                    principles, approaches, and best practices of Generative AI as
+                    part of the CIB Summer Internship Program.
+                </p>
+                <a href="Certificate_GenAI_CIB.png" target="_blank" rel="noopener" class="certificate-link">
+                    View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>Resort Management System</h3>
-            <p>
-                Comprehensive booking and billing system with food ordering
-                and electronic payment functionalities.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Data Warehouse Project</h3>
-            <p>
-                Designed and implemented a data warehouse solution
-                for analytical reporting and business intelligence.
-            </p>
+        <div class="certificate-card reveal">
+            <a href="Certificate_IntroToML_Sprints.png" target="_blank" rel="noopener" class="certificate-thumb">
+                <img src="Certificate_IntroToML_Sprints.png" alt="Introduction to ML Certificate, Sprints">
+            </a>
+            <div class="certificate-info">
+                <h3>Introduction to ML</h3>
+                <p class="certificate-meta">
+                    <i class="fa-solid fa-building-columns"></i>
+                    Sprints
+                </p>
+                <p class="certificate-meta">
+                    <i class="fa-solid fa-hashtag"></i>
+                    ID: SPR-55T0K4
+                </p>
+                <p>
+                    Successfully completed the Introduction to ML program,
+                    covering the core concepts and foundations of machine learning.
+                </p>
+                <a href="Certificate_IntroToML_Sprints.png" target="_blank" rel="noopener" class="certificate-link">
+                    View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -152,56 +290,20 @@
 
 <!-- Contact -->
 <section id="contact">
+    <p class="section-eyebrow">Let's connect</p>
     <h2>Contact Me</h2>
-    <div class="contact-icons">
-        <a href="mailto:mohanedegypt76@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/mohaned-mohamed-90a397259/" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/MohanedMohamedSaleh" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+    <p class="contact-sub">Open to internships, collaborations, and interesting problems.</p>
+    <div class="contact-icons reveal">
+        <a href="mailto:mohanedegypt76@gmail.com" class="icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/mohaned-mohamed-90a397259/" target="_blank" rel="noopener" class="icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/MohanedMohamedSaleh" target="_blank" rel="noopener" class="icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
     </div>
 </section>
 
-<script>
-history.scrollRestoration = "manual";
+<footer>
+    <p>&copy; <span id="year"></span> Mohaned Mohamed. All rights reserved.</p>
+</footer>
 
-window.onload = function () {
-    window.scrollTo(0, 0);
-};
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-
-        closeMenu();
-    });
-});
-
-// Open / Close Menu
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
-    document.getElementById("overlay").classList.toggle("active");
-
-    if (document.getElementById("navMenu").classList.contains("active")) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "";
-    }
-}
-
-// Close Menu
-function closeMenu() {
-    document.getElementById("navMenu").classList.remove("active");
-    document.getElementById("overlay").classList.remove("active");
-    document.body.style.overflow = "";
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
